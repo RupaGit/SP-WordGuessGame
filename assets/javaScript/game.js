@@ -12,11 +12,40 @@
         console.log(wordChosen);        
         var row = document.getElementById("letterRow");
         for (var a=0; a < wordLetters.length; a++) {
-            var cell = row.insertCell(-1);     
+            var cell = row.insertCell(-1);
+            cell.id = "cell_"+a;
+           // console.log(cell.id);
         }
     }
-   
-    window.addEventListener( "load", function( windowLoadE ) {
+
+    function alphaOnly(event) {
+        if ((event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) ){
+            var letter = event.key
+            userChoices.push(letter);
+            compareWithPuzzle(letter.toUpperCase());
+        }
+        return (event.charCode > 64 && 
+            event.charCode < 91) || (event.charCode > 96 && event.charCode < 123);
+      };
+      
+
+    function compareWithPuzzle(letter){
+        for(var i=0; i<wordLetters.length; i++){
+            if(wordLetters[i] === letter) {
+                console.log(wordLetters[i]);
+                console.log(i);
+                var cellToReplace = document.getElementById("cell_"+i);
+                console.log(cellToReplace);
+                cellToReplace.textContent = letter;
+            }
+
+            // else {
+            //     noOfGuesses--;
+            //     console.log("You have "+ noOfGuesses + " left");
+            // }
+        }
+    }
+   /* window.addEventListener( "load", function( windowLoadE ) {
     var p, letter, button, holder;
     holder = document.getElementById( "buttonsHolder" );
     for ( var i = 65; i <= 90; i++ ) {
@@ -37,4 +66,4 @@
     function setLetter( letter ) {
         userChoices.push(letter);
         //console.log(userChoices);
-    } 
+    } */
