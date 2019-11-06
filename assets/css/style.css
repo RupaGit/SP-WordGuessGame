@@ -13,8 +13,9 @@ td {
     height: 50px; 
 }
 
-#buttonHolder {
+div {
     width: 70%;
     height: 50%;
     margin: 0 auto;
+    margin-top: 10px;
 }
