@@ -14,6 +14,9 @@
         for (var a=0; a < wordLetters.length; a++) {
             var cell = row.insertCell(-1);
             cell.id = "cell_"+a;
+            if(wordLetters[a] === " ") {
+                cell.textContent = "-";
+            }
            // console.log(cell.id);
         }
     }
@@ -30,20 +33,22 @@
       
 
     function compareWithPuzzle(letter){
-        for(var i=0; i<wordLetters.length; i++){
-            if(wordLetters[i] === letter) {
-                console.log(wordLetters[i]);
-                console.log(i);
-                var cellToReplace = document.getElementById("cell_"+i);
-                console.log(cellToReplace);
-                cellToReplace.textContent = letter;
+        if((wordLetters.includes(letter)) && (noOfGuesses > 0)) {
+            for(var i=0; i<wordLetters.length; i++){
+                if(wordLetters[i] === letter) {
+                    console.log(wordLetters[i]);
+                    console.log(i);
+                    var cellToReplace = document.getElementById("cell_"+i);
+                    console.log(cellToReplace);
+                    cellToReplace.textContent = letter;
+                }
             }
-
-            // else {
-            //     noOfGuesses--;
-            //     console.log("You have "+ noOfGuesses + " left");
-            // }
         }
+        else {
+            noOfGuesses--;
+            
+        }
+        console.log("You have " + noOfGuesses + " left");
     }
    /* window.addEventListener( "load", function( windowLoadE ) {
     var p, letter, button, holder;
