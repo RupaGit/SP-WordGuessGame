@@ -1,27 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Avengers word guess game </title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+<head>
+  <title> Avengers word guess game </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Marvel&display=swap" rel="stylesheet">
+
+  
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <h2 style="font-style: 'Marvel', sans-serif; color: crimson "> Dont let Thanos get to his glove... Guess the Avenger and save the world... </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">&nbsp;</div>
+        </div>
+        <div class="row justify-content-center">
+            <div id="letters"> </div>
+        </div>    
+        <div class="row">
+            <div class="col-md-12">&nbsp;</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">&nbsp;</div>
+        </div>
+        <div class="row justify-content-center">
+            <div class = "col-md-2">
+                <label style="font-style: 'Marvel', sans-serif; font-weight: bolder; font-size: 20px; color: crimson"> Number of Lives: </label>
+            </div>
+            <div class = "col-md-2">
+                <button id="livesLeft" style="font-style: 'Marvel', sans-serif; font-weight: bolder; font-size: 20px; color: crimson"></button>
+            </div>
+            <div class="col-md-8">
+                <div id="puzzleButtons" ></div>
+            </div>
+        </div> 
+        <div class="row justify-content-center" id="playAgainButton">
+            <div class="col-md-2">
+                <label style="font-style: 'Marvel', sans-serif; font-weight: bolder; font-size: 20px; color: crimson"> Your Wins: </label>
+            </div>
+            <div class = "col-md-2">
+                    <button id="wins" style="font-style: 'Marvel', sans-serif; font-weight: bolder; font-size: 20px; color: crimson"></button>
+            </div>
+            <div class="col-md-8">&nbsp;</div>
+        </div> 
+        <div class="row justify-content-center" id="message">
+                <div class="col-md-12">&nbsp;</div>
+        </div>
+        <img src="assets/images/thanos.jpeg" id="thanos" alt="thanos">
+        <img src="assets/images/thanosGlove.jpg" id="glove" class="rounded img-fluid float-right" alt="thanos Glove">
         <script type="text/javascript" src="assets/javaScript/game.js"></script>
-    </head>
-
-    <body> 
-        <button onclick="hangManChooseRandomWord(event)"> Press Start </button>
-        <div id="letterArea">
-            <table id="letterTable">
-                <tr id="letterRow">
-                </tr>
-          </table>
-          </div>
-
-
-        <div id="userInput"></div>
-            <input type = "text" id = "inValue" onkeypress="return alphaOnly(event)"/>
-        <div id="name"></div>
-    </body>
+    </div>
+</body>
 
 </html>

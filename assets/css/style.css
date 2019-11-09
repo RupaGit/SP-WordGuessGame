@@ -1,21 +1,22 @@
-#letterArea {
-    width: 70%;
-    height: 50px;
-    margin: 0 auto;
-    background-color: lightblue;
+body {
+    background-image: url("../images/avengers.jpg");
+    background-repeat: no-repeat;
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    /*background-position: center;*/
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-table, td {
-    border: 1px solid black;
-    empty-cells: show;
-  }
-td {
-    width: 40px;
-    height: 50px; 
+#thanos {
+    position: relative;
+    margin-left: 0;
 }
-
-div {
-    width: 70%;
-    height: 50%;
-    margin: 0 auto;
-    margin-top: 10px;
+h3 {
+    font-style: 'Marvel', sans-serif; 
+    font-weight: bolder; 
+    font-size: 20px; 
+    border: 2px solid goldenrod;
+    background: lightgreen;
+    color: crimson;
 }
