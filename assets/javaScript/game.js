@@ -11,7 +11,7 @@ document.getElementById("wins").innerHTML = sessionStorage.noOfWins;
 
 //On page load, this function will generate the alphabets and generate buttons for each alphabet. 
 var divgetter = document.getElementById ("letters");
-console.log(wordChosen);
+//console.log(wordChosen);
 for (var i=65; i<91; i++){
     var alphabet = String.fromCharCode(i);
     var buttons = document.createElement("button");
